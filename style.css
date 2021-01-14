@@ -1,0 +1,676 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+
+@font-face {
+	font-family: 'Product Sans';
+	src: url(fonts/Product\ Sans\ Regular.ttf);
+	font-style: normal;
+	font-weight: 100;
+
+}
+
+
+@font-face {
+	font-family: 'Product Sans';
+	src: url(fonts/Product\ Sans\ Bold.ttf);
+	font-style: normal;
+	font-weight: 200;
+
+}
+
+body {
+
+    font-family: Product Sans;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+.line1 h1 {
+
+    font-weight: 200;
+    font-size: 70px;
+    color: #ffffff;
+    position: absolute;
+    padding-top: 350px;
+    padding-left: 285px;
+}
+
+
+
+.line2 h1 {
+
+    font-weight: 200;
+    font-size: 70px;
+    color: #ffffff;
+    position: absolute;
+    padding-top: 445px;
+    padding-left: 285px;
+
+}
+
+
+.line3 h2 {
+
+    font-weight: 100;
+    font-size: 20px;
+    color: #434554;
+    letter-spacing: 1px;
+    position: absolute;
+    padding-top: 560px;
+    padding-left: 285px;
+}
+
+
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+  
+  .fadeInAnimated {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards; /* forwards (animation-fill-mode) retains the style from the last keyframe when the animation ends */
+  }
+  
+  #second {
+    animation-delay: 1.5s;
+  }
+  
+  #third {
+    animation-delay: 2.5s;
+  }
+
+  #fourth {
+      animation-delay: 3.5s;
+  }
+
+
+
+.button {
+
+    padding-left: 285px;
+    padding-top: 660px;
+}
+.btn {
+
+    font-family: Product Sans;
+    font-size: 18px;
+    background: #FF4A57;
+    width: 160px;
+    padding: 15px 42px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(151, 151, 151, 0.001);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    position: relative;
+    
+  }
+
+.btn:hover, .btn:focus, .btn:active {
+
+    box-shadow: 0 0 20px rgb(206, 206, 206);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    
+
+}
+
+
+.about_caption h2 {
+    
+    position: relative;
+    padding-top: 350px;
+    font-family: Product Sans;
+    font-weight: 100;
+    color: #ffffff;
+    padding-left: 285px;
+    font-size: 20px;
+
+
+}
+
+
+.skill-set h1 {
+
+    position: relative;
+    padding-top: 25px;
+    padding-left: 285px;
+    font-family: Product Sans;
+    color: #FF4A57;
+    font-size: 70px;
+}
+
+.underline {
+
+    position: relative;
+    padding-left: 285px;
+    padding-top: 10px;
+}
+
+
+
+/*Social Media Icons */
+
+.github_logo {
+    width: 29px;
+    height: 30px;
+    background: none;
+    position: relative;
+    padding-left: 1654px;
+    top: -345px;
+    
+}
+
+.youtube_logo {
+    position: relative;
+    padding-left: 1654px;
+    top: -312px;
+}
+
+
+.instagram_logo {
+    position: relative;
+    padding-left: 1654px;
+    top: -279px;
+}
+
+.linkedin_logo {
+    position: relative;
+    padding-left: 1654px;
+    top: -246px;
+}
+
+
+
+
+/*Navigation */
+
+nav {
+    padding: 30px;
+}
+
+.logo {
+    position: relative;
+    float: left;
+    padding: 8px;
+    margin-left: 16px;
+    margin-top: 5px;
+    left: 235px;
+}
+
+.logo a {
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    font-family: Product Sans;
+    font-size: 18px;
+    letter-spacing: 0px;
+    text-decoration: none;
+}
+
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block;
+    top: 15px;
+    right: 200px;
+    float: left;
+}
+
+nav ul li:not(:first-child) {
+    margin-left: 48px;
+}
+
+nav ul li:last-child {
+    margin-right: 24px;
+}
+
+nav ul li a {
+    display: inline-block;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-family: Product Sans;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    font-weight: 100;
+}
+
+nav ul li a:hover {
+
+    color: #FF4A57;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 864px) {
+    .logo {
+          padding: 0;
+    }
+
+    .nav-wrapper {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          background: #FF4A57;
+          opacity: 0;
+          transition: all 0.2s ease;
+    }
+
+    .nav-wrapper ul {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+    }
+
+    .nav-wrapper ul li {
+          display: block;
+          float: none;
+          width: 100%;
+          text-align: right;
+          margin-bottom: 10px;
+    }
+
+    .nav-wrapper ul li:nth-child(1) a {
+          transition-delay: 0.2s;
+    }
+
+    .nav-wrapper ul li:nth-child(2) a {
+          transition-delay: 0.3s;
+    }
+
+    .nav-wrapper ul li:nth-child(3) a {
+          transition-delay: 0.4s;
+    }
+
+    .nav-wrapper ul li:nth-child(4) a {
+          transition-delay: 0.5s;
+    }
+
+    .nav-wrapper ul li:not(:first-child) {
+          margin-left: 0;
+    }
+
+    .nav-wrapper ul li a {
+          padding: 10px 24px;
+          opacity: 0;
+          color: rgb(255, 255, 255);
+          font-size: 14px;
+          font-family: Product Sans;
+          font-weight: 200;
+          letter-spacing: 1.2px;
+          transform: translateX(-20px);
+          transition: all 0.2s ease;
+    }
+
+    .nav-btn {
+          position: fixed;
+          right: 10px;
+          top: 10px;
+          display: block;
+          width: 48px;
+          height: 48px;
+          cursor: pointer;
+          z-index: 9999;
+          border-radius: 50%;
+    }
+
+    .nav-btn i {
+          display: block;
+          width: 20px;
+          height: 2px;
+          background: rgb(255, 255, 255);
+          border-radius: 2px;
+          margin-left: 14px;
+    }
+
+    .nav-btn i:nth-child(1) {
+          margin-top: 16px;
+    }
+
+    .nav-btn i:nth-child(2) {
+          margin-top: 4px;
+          opacity: 1;
+    }
+
+    .nav-btn i:nth-child(3) {
+          margin-top: 4px;
+    }
+}
+
+#nav:checked + .nav-btn {
+    transform: rotate(45deg);
+}
+
+#nav:checked + .nav-btn i {
+    background: #000;
+    transition: transform 0.2s ease;
+}
+
+#nav:checked + .nav-btn i:nth-child(1) {
+    transform: translateY(6px) rotate(180deg);
+}
+
+#nav:checked + .nav-btn i:nth-child(2) {
+    opacity: 0;
+}
+
+#nav:checked + .nav-btn i:nth-child(3) {
+    transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-wrapper {
+    z-index: 9990;
+    opacity: 1;
+}
+
+#nav:checked ~ .nav-wrapper ul li a {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+/* Skills Cards */
+
+.center {
+    padding-top: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*Make image non-draggable */
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
+
+/* Projects Section */
+
+.portfolio_caption h2 {
+
+    position: relative;
+    padding-top: 440px;
+    font-family: Product Sans;
+    font-weight: 100;
+    color: #ffffff;
+    padding-left: 285px;
+    font-size: 20px;
+
+}
+
+.projects_header h1 {
+
+    position: relative;
+    padding-top: 25px;
+    font-family: Product Sans;
+    font-weight: 200;
+    color: #FF4A57;
+    padding-left: 285px;
+    font-size: 70px;
+}
+
+.projects_underline {
+
+    position: relative;
+    padding-left: 285px;
+    padding-top: 10px;
+}
+
+
+
+
+
+.grid {
+    display: grid;
+    width: 1429px;
+    height: 4449px;
+    grid-gap: 105px;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 2fr));
+    align-items: start;
+    padding-top: 100px;
+    margin: auto;
+  }
+  
+  .grid-item {
+    background-color: #2B2D41;
+    width: 662px;
+    height: 663px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+  }
+  
+  .card-img {
+    display: block;
+    width: 662px;
+    height: 286px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 3rem;
+  }
+  
+  .card-header {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 200;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-text {
+    font-size: 21px;
+    font-weight: 100;
+    line-height: 1.7;
+    color: #ffffff;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+  
+  .card-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 132px;
+    height: 47px;
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-family: Product Sans;
+    font-size: 17px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #FF4A57;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  .flux-button {
+      padding-top: 60px;
+      padding-left: 210px;
+  }
+  
+  .card-btn span {
+    margin-left: 1rem;
+    transition: 0.2s;
+  }
+  
+  .card-btn:hover,
+  .card-btn:active {
+    background-color: #fc6872;
+  }
+  
+  .card-btn:hover span,
+  .card-btn:active span {
+    margin-left: 1.5rem;
+  }
+
+
+
+/*Project Card Skill Buttons */
+
+.skill-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personal_website_skills_container {
+
+  padding-left: 82px;
+  padding-top: 10px;
+
+}
+
+
+.flux_skills_container {
+
+    padding-left: 186px;
+    padding-top: 10px;
+  
+  }
+
+.easypass_skills_container {
+
+    padding-left: 238px;
+}
+
+
+.cyberpunk_skills_container {
+
+    padding-left: 185px;
+}
+
+.cults_skills_container {
+
+    padding-left: 238px;
+}
+
+.projectprevise_skills_container {
+
+    padding-left: 185px;
+}
+
+.black_excellence_skills_container {
+
+    padding-left: 238px;
+}
+
+.christmasshow_skills_container {
+
+    padding-left: 134px;
+}
+
+.hyperlazer_skills_container {
+
+    padding-left: 135px;
+}
+
+.synthwave_skills_container {
+
+    padding-left: 238px;
+}
+
+.akai_skills_container {
+
+    padding-left: 186px;
+}
+
+.photography_skills_container {
+
+    padding-left: 186px;
+}
+
+
+
+/*Conclusion Stylization */
+
+.conclusion-header h1 {
+
+    position: relative;
+    color: #FF4A57;
+    font-weight: 200;
+    font-size: 70px;
+    padding-top: 500px;
+    padding-left: 285px;
+
+}
+
+.conclusion-subtitle h2 {
+
+    position: relative;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 100;
+    padding-top: 50px;
+    padding-left: 285px;
+}
+
+.conclusion-button {
+
+    position: relative;
+    padding-left: 285px;
+    padding-top: 95px;
+}
+
+
+/*Footer Section */
+
+#footer {
+
+    background-color: #2B2D41;
+    position: relative;
+    top: 700px;
+    height: 200px;
+    margin-top: -200px;
+    clear: both;
+}
+
+.footer-text h2 {
+
+    text-align: center;
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 15px;
+    padding-top: 100px;
+    
+
+}
